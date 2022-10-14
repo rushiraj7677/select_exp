@@ -3,8 +3,10 @@
   padding: 0;
 }
 html, body{
+  
   height: 100%;
 }
+
 body{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-color: #fae19d;
@@ -19,9 +21,8 @@ h1{
 
 }
 .container{
-  
   height: 700px;
-  width: 700px;
+  width: 800px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
