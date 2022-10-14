@@ -24,7 +24,7 @@ function Exp_grid(){
 
     
     function check(current){
-    if(items[current].id == 1 ||items[current].id == 4 || items[current].id == 7 || items[current].id == 9){
+    if(items[current].id === 1 ||items[current].id === 4 || items[current].id === 7 || items[current].id === 9){
         items[current].stat = "true"
         items[current].stat = "active"
         setItems([...items])
@@ -41,10 +41,7 @@ function Exp_grid(){
     
     }
     function handleClick(id) {
-        
         check(id)
-        console.log("click " + id)
-        
     }
     
     return (
