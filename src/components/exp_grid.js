@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Expression from './expression'
 
 function Exp_grid(){
-    const[isCorrect] = useState()
+    
     const [items, setItems] = useState([
         { id: 1, exp: '12 * 3', stat: "" },
         { id: 2, exp: '6 * 3', stat: "" },
@@ -21,9 +21,29 @@ function Exp_grid(){
         { id: 15, exp: '11 * 3', stat: "" },    
         { id: 16, exp: '50 - 25', stat: "" }
     ].sort(() => Math.random() - 0.5))
-    
 
-    function handleClick() {
+    
+    function check(current){
+    if(items[current].id == 1 ||items[current].id == 4 || items[current].id == 7 || items[current].id == 9){
+        items[current].stat = "true"
+        items[current].stat = "active"
+        setItems([...items])
+    }else {
+        items[current].stat = "false" 
+        setItems([...items])
+        setTimeout(() => {
+            items[current].stat = ""
+            
+            setItems([...items])
+            
+        }, 1000)
+    }
+    
+    }
+    function handleClick(id) {
+        
+        check(id)
+        console.log("click " + id)
         
     }
     

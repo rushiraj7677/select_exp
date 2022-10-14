@@ -35,3 +35,12 @@ h1{
   align-items: center;
   border-radius: 5px;
 }
+.exps.true{
+  background-color: green;
+}
+.exps.false{
+  background-color: red;
+}
+.exps.active{
+  border-radius: 50px;
+}
